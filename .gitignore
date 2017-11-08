@@ -1,0 +1,5 @@
+node_modules
+.vscode
+platforms
+package.json.bk.js
+app/package.json.bk
