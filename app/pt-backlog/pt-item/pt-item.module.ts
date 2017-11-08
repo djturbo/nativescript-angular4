@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { PTItemComponent } from './pt-item.component';
+import { ItemTypePickerModalComponent } from '../shared/item-type-picker-modal.component';
+
 @NgModule({
+    imports: [NativeScriptModule],
+    exports: [PTItemComponent],
     declarations: [
-        PTItemComponent
-    ],
-    imports: [
-        CommonModule,
-        NativeScriptModule],
-    exports: [
-        PTItemComponent
+        PTItemComponent,
+        ItemTypePickerModalComponent
     ],
     providers: [],
+    entryComponents: [
+        ItemTypePickerModalComponent
+    ]
 })
 export class PTItemModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+/* Import services */
+import { BacklogService } from '../../services/backlog.service';
 
 import { ItemTypeEnum, StatusEnum, PriorityEnum } from '../../shared/static-data';
 import { PTDomain } from '../../typings/domain';
@@ -13,7 +15,7 @@ import IPTItem = PTDomain.IPTItem;
 export class PTItemListComponent implements OnInit {
     public ptItems: IPTItem[];
 
-    constructor() { }
+    constructor(private backlogService: BacklogService) { }
 
     ngOnInit() {
         this.ptItems = ITEMS;

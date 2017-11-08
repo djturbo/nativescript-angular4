@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+/* Services */
+import { BacklogService } from '../services/backlog.service';
 
 import { PTBacklogComponent } from './pt-backlog.component';
 import { PipesModule } from './pipes/pipes.module';
@@ -17,6 +19,6 @@ import { PTItemModule } from './pt-item/pt-item.module';
         PipesModule,
         PTItemModule],
     exports: [PTBacklogComponent],
-    providers: [],
+    providers: [BacklogService],
 })
 export class PTBacklogModule { }
