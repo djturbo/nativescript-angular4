@@ -3,3 +3,4 @@ node_modules
 platforms
 package.json.bk.js
 app/package.json.bk
+yarn.lock

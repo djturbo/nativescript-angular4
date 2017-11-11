@@ -5,8 +5,8 @@ import { LoginComponent } from './pt-login.component';
 
 @NgModule({
     declarations: [LoginComponent],
-    imports: [ CommonModule ],
-    exports: [],
+    imports: [CommonModule],
+    exports: [LoginComponent],
     providers: [],
 })
-export class LoginModule {}
+export class LoginModule { }

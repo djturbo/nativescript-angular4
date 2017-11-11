@@ -1,0 +1,10 @@
+<GridLayout rows="auto, auto, 50">
+    <StackLayout row="1">
+        <TextField hint="Username" class="login-field" text=""></TextField>
+        <TextField hint="Password" class="login-field" secure="true" text=""></TextField>
+        <StackLayout class="btn-login-wrapper">
+            <Button class="btn-login" text="SING IN" (tap)="login()"></Button>
+        </StackLayout>
+    </StackLayout>
+    <ActivityIndicator row="2" [busy]="isLoading"></ActivityIndicator>
+</GridLayout>

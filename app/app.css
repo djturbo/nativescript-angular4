@@ -14,6 +14,11 @@ refer to http://docs.nativescript.org/ui/theme.
 /*@import 'nativescript-theme-core/css/core.light.css';*/
 
 @import 'platform.css';
+ActionBar {
+    background-color: #4b5833;
+    color: white;
+}
+
 .pt-item-detail-header {
     background-color: #333333;
     color: #ffffff;

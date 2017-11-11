@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
     template: `
         <pt-backlog></pt-backlog>
         
-    `, 
+    `,
 })
 
 export class AppComponent { }

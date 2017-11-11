@@ -40,3 +40,16 @@ tns run android
 nativescript
 NativeScript + Angular Snippets
 Angular 5 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layout
+
+## Añadir lodash dependencia
+yarn install lodash@4.17.4
+tns run ios
+npm install @types/lodash@4.14.44 --save
+
+## Cambiar aspecto de la barra de estado
+primero en el fichero de configuración de ios en app/App_Resources/IOS/info.plist añadir
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+después borrr el directorio platform y reconstruirlo:
+rm -rf platforms/
+tns run ios

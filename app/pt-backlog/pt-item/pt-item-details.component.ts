@@ -9,16 +9,12 @@ import { PTDomain } from '../../typings/domain';
 import IPTItem = PTDomain.IPTItem;
 
 import { ItemTypePickerModalComponent } from "../shared/item-type-picker-modal.component";
-
-
 @Component({
-    moduleId: module.id,
-    selector: 'pt-item',
-    templateUrl: 'pt-item.component.html',
-    styleUrls: ['pt-item.component.css']
+    selector: 'pt-item-details',
+    templateUrl: 'pt-item-details.component.html',
+    styleUrls: [' pt-item-details.component.scss']
 })
-export class PTItemComponent implements OnInit {
-
+export class PTItemDetailsComponent implements OnInit {
     public item: IPTItem;
 
     constructor(
