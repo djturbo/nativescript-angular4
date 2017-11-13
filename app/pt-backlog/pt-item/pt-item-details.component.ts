@@ -10,6 +10,7 @@ import IPTItem = PTDomain.IPTItem;
 
 import { ItemTypePickerModalComponent } from "../shared/item-type-picker-modal.component";
 @Component({
+    moduleId: module.id,
     selector: 'pt-item-details',
     templateUrl: 'pt-item-details.component.html',
     styleUrls: [' pt-item-details.component.scss']

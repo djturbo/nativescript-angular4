@@ -53,3 +53,6 @@ primero en el fichero de configuración de ios en app/App_Resources/IOS/info.pli
 después borrr el directorio platform y reconstruirlo:
 rm -rf platforms/
 tns run ios
+
+## NativeScript Pro UI
+npm install nativescript-pro-ui --save

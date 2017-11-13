@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 /* Services */
 import { BacklogService } from '../services/backlog.service';
+/* NativeScript PRO UI Modules */
+import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
 
 import { PTBacklogComponent } from './pt-backlog.component';
 import { PipesModule } from './pipes/pipes.module';
@@ -17,7 +19,8 @@ import { PTItemModule } from './pt-item/pt-item.module';
         CommonModule,
         NativeScriptModule,
         PipesModule,
-        PTItemModule],
+        PTItemModule,
+        NativeScriptUISideDrawerModule],
     exports: [PTBacklogComponent],
     providers: [BacklogService],
 })

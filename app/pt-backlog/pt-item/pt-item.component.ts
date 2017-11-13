@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
-
+import { SegmentedBar, SegmentedBarItem } from 'ui/segmented-bar';
 import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 
 import { BacklogService } from '../../services';
@@ -20,30 +20,32 @@ import { ItemTypePickerModalComponent } from "../shared/item-type-picker-modal.c
 export class PTItemComponent implements OnInit {
 
     public item: IPTItem;
-
+    private _itemDetailScreens = [
+        { title: 'Details', routePath: 'pt-item-details' },
+        { title: 'Tasks', routePath: 'pt-item-tasks' },
+        { title: 'Chitchat', routePath: 'pt-item-chitchat' }
+    ];
+    public myNavItems: Array<SegmentedBarItem> = [];
     constructor(
         private modalService: ModalDialogService,
         private vcRef: ViewContainerRef,
         private backlogService: BacklogService
-    ) { }
+    ) {
+        for (let i = 0; i < this._itemDetailScreens.length; i++) {
+            let tmpSegmentedBarItem: SegmentedBarItem = <SegmentedBarItem>new SegmentedBarItem();
+            tmpSegmentedBarItem.title = this._itemDetailScreens[i].title;
+            this.myNavItems.push(tmpSegmentedBarItem);
+        }
+
+    }
 
     ngOnInit() {
 
         this.backlogService.getItem('2').then(item => this.item = item);
     }
 
-    public showTypeModal() {
-        const options: ModalDialogOptions = {
-            context: { itemTitle: this.item.title, promptMsg: "Select item type" },
-            fullscreen: true,
-            viewContainerRef: this.vcRef
-        };
-
-        this.modalService.showModal(ItemTypePickerModalComponent, options).then((res: ItemTypeEnum) => {
-            if (res) {
-                console.log(res);
-                this.item.type = res;
-            }
-        });
+    public selectedItemDetailScreenIndexChanged(segBar: SegmentedBar) {
+        let newIndex = segBar.selectedIndex;
+        console.log("newIndex: ", newIndex);
     }
 }

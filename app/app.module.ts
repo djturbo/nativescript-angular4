@@ -4,6 +4,9 @@ import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
 
+/* NativeScript PRO UI */
+import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
+
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
 

@@ -2,6 +2,8 @@
 <StackLayout class="pt-item-container">
     <StackLayout class="pt-item-detail-header">
         <Label *ngIf="item" [text]="item.title" class="pt-item-detail-header-title"></Label>
+        <SegmentedBar #sb selectedIndex="1" [items]="myNavItems" (selectedIndexChanged)="selectedItemDetailScreenIndexChanged(sb)">
+        </SegmentedBar>
     </StackLayout>
     <pt-item-details></pt-item-details>
 
