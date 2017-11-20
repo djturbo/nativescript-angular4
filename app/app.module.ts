@@ -19,6 +19,8 @@ import { LoginModule } from './pt-login/pt-login.module';
 import { setStatusBarColors } from './shared/status-bar-util';
 setStatusBarColors();
 
+import { AuthenticationService } from './services';
+
 @NgModule({
     bootstrap: [
         AppComponent
@@ -33,6 +35,7 @@ setStatusBarColors();
         AppComponent
     ],
     providers: [
+        AuthenticationService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

@@ -56,3 +56,7 @@ tns run ios
 
 ## NativeScript Pro UI
 npm install nativescript-pro-ui --save
+
+## Instalar Faker Para mockear
+npm install faker --save
+npm install @types/faker --save
